@@ -112,7 +112,7 @@ class jyouku_crawler extends jcrawler {
 		}
 
 		$ary = array();
-		preg_match('/<ul class="baseinfo">\s*<li class="link">.*<\/a><\/li>\s*<li class="thumb">\s*<img.*src=[\'"]{1}(.*)[\'"]{1}[^>]*><\/li>.*<li class="row1 rate">.*<\/li>\s*<li class="row1 alias">.*<\/li>\s*(.*)<\/ul>/siU', $html, $ary);
+		preg_match('/<ul class="baseinfo">\s*<li class="link">.*<\/a><\/li>\s*<li class="thumb">\s*<img.*src=[\'"]{1}(.*)[\'"]{1}[^>]*><\/li>.*<li class="row1 rate">.*<\/li>(.*)<\/ul>/siU', $html, $ary);
 		$poster = $ary[1];
 
 		$html = $ary[2];
